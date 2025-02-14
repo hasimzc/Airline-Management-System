@@ -1,0 +1,152 @@
+{
+	"info": {
+		"_postman_id": "47d95612-741b-472c-b32d-bc4c25e39bc1",
+		"name": "Airplane API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33660847"
+	},
+	"item": [
+		{
+			"name": "List all airplanes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/airplanes/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"airplanes",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get details of a specific airplane",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/airplanes/1/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"airplanes",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get the flights of a specific airplane",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/airplanes/1/flights",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"airplanes",
+						"1",
+						"flights"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add a new airplane",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"tail_number\": \"TC-HZC\",\n    \"model\": \"Airbus A380\",\n    \"capacity\": 509,\n    \"production_year\": 2015,\n    \"status\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/airplanes/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"airplanes",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a specific airplane.",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"status\": false\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/airplanes/1/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"airplanes",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a specific airplane",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/airplanes/2/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"airplanes",
+						"2",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
